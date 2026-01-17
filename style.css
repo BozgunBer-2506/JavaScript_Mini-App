@@ -1,0 +1,155 @@
+/* === GRUNDEINSTELLUNGEN === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#app {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+/* === HEADER === */
+header {
+    background: #667eea;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+#status {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+#status.loading {
+    color: #ffd700;
+}
+
+#status.error {
+    color: #ff6b6b;
+}
+
+#status.success {
+    color: #51cf66;
+}
+
+/* === SEARCH SECTION === */
+#search-section {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+#search-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+#load-btn {
+    padding: 12px 24px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#load-btn:hover {
+    background: #5a67d8;
+}
+
+#load-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* === USER LIST === */
+#user-list {
+    padding: 20px;
+    display: grid;
+    gap: 15px;
+}
+
+.placeholder {
+    text-align: center;
+    color: #888;
+    padding: 40px;
+}
+
+/* === USER CARD === */
+.user-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.user-email {
+    color: #666;
+    font-size: 14px;
+}
+
+.user-location {
+    color: #888;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* === LOADING SPINNER === */
+.loading-spinner {
+    text-align: center;
+    padding: 40px;
+    color: #667eea;
+}
